@@ -4,11 +4,19 @@
   "description": "nightfall npm",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.6.5"
+    "angular": "^1.6.5",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "trumpet": "^1.7.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "hyperstream": "^1.2.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node npmscripts\\build.js",
+    "dir": "node npmscripts\\dir.js > tmp && move tmp index.html",
+    "test": "echo \"Error: no test specified\""
   },
   "author": "",
   "license": "ISC"
