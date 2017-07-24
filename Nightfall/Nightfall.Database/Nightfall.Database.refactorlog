@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="8b528537-b7ab-4eff-b711-3d4ad09731b0" ChangeDateTime="07/24/2017 05:05:15">
+    <Property Name="ElementName" Value="[dbo].[FK_Effect_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Effect]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Effect_Ability]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="74684c2f-9cd7-4fa7-a942-9f92a888cf98" ChangeDateTime="07/24/2017 05:06:10">
+    <Property Name="ElementName" Value="[dbo].[Effect].[ParentId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Effect]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ZoneId" />
+  </Operation>
+</Operations>
