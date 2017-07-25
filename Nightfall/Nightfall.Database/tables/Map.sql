@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Map]
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(0,1), 
     [TwilightCount] INT NULL DEFAULT 0, 
     [FearCount] INT NULL DEFAULT 0
 )

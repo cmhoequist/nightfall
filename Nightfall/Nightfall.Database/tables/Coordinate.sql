@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Coordinate]
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(0,1), 
     [Xvalue] INT NOT NULL, 
     [Yvalue] INT NOT NULL, 
     [Zvalue] INT NOT NULL, 
