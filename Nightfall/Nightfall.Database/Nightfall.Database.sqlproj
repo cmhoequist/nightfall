@@ -61,6 +61,17 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="tables\Coordinate.sql" />
+    <Build Include="tables\Champion.sql" />
+    <Build Include="tables\Token.sql" />
+    <Build Include="tables\Cell.sql" />
+    <Build Include="tables\Map.sql" />
+    <Build Include="tables\Edge.sql" />
+    <Build Include="tables\ChampionAbility.sql" />
+    <Build Include="tables\ChampionAbilityEffect.sql" />
+    <Build Include="tables\Horror.sql" />
+    <Build Include="tables\HuntEffect.sql" />
+    <Build Include="tables\HorrorAbility.sql" />
+    <Build Include="tables\Harbinger.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Nightfall.Database.refactorlog" />

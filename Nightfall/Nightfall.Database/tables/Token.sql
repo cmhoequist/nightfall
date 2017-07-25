@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Token]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [Type] VARCHAR(10) NOT NULL
+)

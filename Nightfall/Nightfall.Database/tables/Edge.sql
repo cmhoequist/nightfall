@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Edge]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [Color] VARCHAR(7) NULL DEFAULT '#000000', 
+    [CellId] INT NOT NULL, 
+    [Direction] VARCHAR(5) NOT NULL, 
+    CONSTRAINT [FK_Edge_Cell] FOREIGN KEY ([CellId]) REFERENCES [Cell]([Id])
+)

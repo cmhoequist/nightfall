@@ -14,4 +14,53 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="ZoneId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="11d9e251-66de-4d0b-96ce-3c5bdf339c56" ChangeDateTime="07/25/2017 01:29:24">
+    <Property Name="ElementName" Value="[dbo].[Champion].[XpTracker]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Champion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="XpCount" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="df936f5c-198c-4717-a585-5f0751cecb5e" ChangeDateTime="07/25/2017 01:31:28">
+    <Property Name="ElementName" Value="[dbo].[FK_Cell_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Cell]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Cell_Map]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9f4d74d0-e8fd-4478-a8a1-5d49f02be931" ChangeDateTime="07/25/2017 01:40:48">
+    <Property Name="ElementName" Value="[dbo].[FK_ChampionAbility_Champion]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ChampionAbility]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Ability_Champion]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="eb0b9d24-0a64-4c7c-bfaf-37ad9b632c04" ChangeDateTime="07/25/2017 01:45:34">
+    <Property Name="ElementName" Value="[dbo].[HuntEffect].[HuntId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HuntEffect]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HorrorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e326ae62-e140-4636-aef9-8a065253b039" ChangeDateTime="07/25/2017 01:47:05">
+    <Property Name="ElementName" Value="[dbo].[Horror].[NativeZone]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Horror]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ZoneId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e6c053c6-6314-4119-8ff5-5f47de180fb8" ChangeDateTime="07/25/2017 01:53:24">
+    <Property Name="ElementName" Value="[dbo].[Champion].[ZoneId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Champion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NativeZoneId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0d2719e0-9645-44c0-8ee3-3180ced69081" ChangeDateTime="07/25/2017 01:53:44">
+    <Property Name="ElementName" Value="[dbo].[Horror].[ZoneId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Horror]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NativeZoneId" />
+  </Operation>
 </Operations>
