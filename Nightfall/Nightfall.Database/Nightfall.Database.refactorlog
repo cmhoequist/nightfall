@@ -63,4 +63,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="NativeZoneId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="40503b22-6e07-4c56-ac86-aa740f822224" ChangeDateTime="07/25/2017 02:48:57">
+    <Property Name="ElementName" Value="[dbo].[Map].[NMW]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Map]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1627cdcb-7aad-4071-b53e-8dd11787b000" ChangeDateTime="07/25/2017 02:57:15">
+    <Property Name="ElementName" Value="[dbo].[FK_TokenToCoordinate_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[TokenToCoordinate]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Bridge_Token]" />
+  </Operation>
 </Operations>

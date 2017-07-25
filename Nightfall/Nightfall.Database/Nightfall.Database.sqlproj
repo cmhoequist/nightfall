@@ -58,6 +58,7 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="tables" />
+    <Folder Include="tables\bridges" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="tables\Coordinate.sql" />
@@ -72,6 +73,7 @@
     <Build Include="tables\HuntEffect.sql" />
     <Build Include="tables\HorrorAbility.sql" />
     <Build Include="tables\Harbinger.sql" />
+    <Build Include="tables\bridges\TokenToCoordinate.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Nightfall.Database.refactorlog" />
