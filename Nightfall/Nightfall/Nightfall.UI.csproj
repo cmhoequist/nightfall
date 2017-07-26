@@ -68,7 +68,7 @@
     <Content Include="app\hexmap\hexmap.html" />
     <Content Include="app\hexmap\hexmap.js" />
     <Content Include="content\styles.css" />
-    <Content Include="npmscripts\dir.js" />
+    <Content Include="npmscripts\injectDependenciesToIndex.js" />
     <Content Include="packages.config" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
