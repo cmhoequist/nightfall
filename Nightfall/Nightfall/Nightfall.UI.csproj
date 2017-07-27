@@ -65,13 +65,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\config.js" />
     <Content Include="app\hexmap\hexmap.html" />
     <Content Include="app\hexmap\hexmap.js" />
     <Content Include="content\styles.css" />
+    <Content Include="npmscripts\copyfonts.js" />
     <Content Include="npmscripts\injectDependenciesToIndex.js" />
     <Content Include="packages.config" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
+    <Content Include="content\fonts\lilac_malaria-webfont.woff" />
+    <Content Include="content\fonts\1942-webfont.woff" />
+    <Content Include="content\fonts\Kingthings_Trypewriter_2-webfont.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

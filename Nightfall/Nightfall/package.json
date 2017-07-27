@@ -8,19 +8,21 @@
     "angular-animate": "^1.6.5",
     "angular-aria": "^1.6.5",
     "angular-material": "^1.1.4",
-    "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
+    "gulp-replace": "^0.6.1",
     "jquery": "^3.2.1",
     "trumpet": "^1.7.2"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.2.0",
     "hyperstream": "^1.2.2"
   },
   "scripts": {
-    "build": "node npmscripts\\build.js",
-    "inject": "node npmscripts\\injectDependenciesToIndex.js > tmp && move tmp index.html",
     "test": "echo \"Error: no test specified\"",
-    "copyfonts": "node npmscripts/copyfonts.js"
+    "injectdeps": "gulp injectAll",
+    "injectfonts": "gulp injectFonts",
+    "gulpbuild": "gulp gulpBuild"
   },
   "author": "",
   "license": "ISC"
