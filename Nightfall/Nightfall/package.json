@@ -5,6 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-aria": "^1.6.5",
     "angular-material": "^1.1.4",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
@@ -17,7 +19,8 @@
   "scripts": {
     "build": "node npmscripts\\build.js",
     "inject": "node npmscripts\\injectDependenciesToIndex.js > tmp && move tmp index.html",
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "copyfonts": "node npmscripts/copyfonts.js"
   },
   "author": "",
   "license": "ISC"

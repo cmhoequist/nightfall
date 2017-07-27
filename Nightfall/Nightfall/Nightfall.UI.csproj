@@ -83,7 +83,6 @@
     <Content Include="app\module.js" />
     <Content Include="app\shell\shell.html" />
     <Content Include="app\shell\shell.js" />
-    <Content Include="npmscripts\build.js" />
     <Content Include="index.html" />
     <Content Include="Testing\testHtml.html" />
     <Content Include="Web.config" />

@@ -3,5 +3,7 @@
         //Project dependencies
 
         //Third party dependencies
+        'ngAnimate',
+        'ngMaterial',
     ]);
 })();
