@@ -1,9 +1,11 @@
 ﻿(function () {
     angular.module('moritz.nightfall', [
-        //Project dependencies
-
         //Third party dependencies
         'ngAnimate',
+        'ngRoute',
         'ngMaterial',
+
+        //Project dependencies
+        'moritz.nightfall.champions',
     ]);
 })();

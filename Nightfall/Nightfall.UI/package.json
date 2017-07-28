@@ -9,14 +9,13 @@
     "angular-aria": "^1.6.5",
     "angular-material": "^1.1.4",
     "font-awesome": "^4.7.0",
-    "gulp-replace": "^0.6.1",
-    "jquery": "^3.2.1",
-    "trumpet": "^1.7.2"
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
+    "angular-route": "^1.6.5",
     "gulp": "^3.9.1",
     "gulp-inject": "^4.2.0",
-    "hyperstream": "^1.2.2"
+    "gulp-replace": "^0.6.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\"",
@@ -24,6 +23,6 @@
     "injectfonts": "gulp injectFonts",
     "gulpbuild": "gulp gulpBuild"
   },
-  "author": "",
+  "author": "Moritz",
   "license": "ISC"
 }

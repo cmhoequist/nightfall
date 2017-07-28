@@ -1,7 +1,7 @@
 ﻿(function () {
     angular
         .module('moritz.nightfall')
-        .controller('ShellCtrl', function () {
+        .controller('ShellCtrl', [function () {
             ////VARIABLES
             var vm = this;
 
@@ -12,5 +12,5 @@
             ////HELPER METHODS
 
             ////ACTIVATION
-        });
+        }]);
 })();

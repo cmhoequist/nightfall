@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Nightfall</title>
     <!--inject:css-->
     <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
     <link rel="stylesheet" href="/content/styles.css">
@@ -10,6 +10,7 @@
     <!--inject:nodemodules:js-->
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
     <script src="/node_modules/angular-animate/angular-animate.js"></script>
     <script src="/node_modules/angular-aria/angular-aria.js"></script>
     <script src="/node_modules/angular-material/angular-material.js"></script>
@@ -17,28 +18,15 @@
     <!--inject:js -->
     <script src="/app/module.js"></script>
     <script src="/app/config.js"></script>
+    <script src="/app/routing.js"></script>
+    <script src="/app/champion/champion.module.js"></script>
+    <script src="/app/champion/champion.api.js"></script>
     <script src="/app/hexmap/hexmap.js"></script>
+    <script src="/app/champion/champion.js"></script>
     <script src="/app/shell/shell.js"></script>
     <!-- endinject -->
 </head>
 <body ng-app="moritz.nightfall">
-    <div id="inject">
-        
-		<link rel="stylesheet" href="/node_modules/angular-material/angular-material.css" />
-		<link rel="stylesheet" href="/content/styles.css" />
-	
-		<script src="/node_modules/jquery/dist/jquery.js"></script>
-		<script src="/node_modules/angular/angular.js"></script>
-		<script src="/node_modules/angular-material/angular-material.js"></script>
-		<script src="/node_modules/angular-animate/angular-animate.js"></script>
-		<script src="/node_modules/angular-aria/angular-aria.js"></script>
-	
-		<script src="/app/module.js"></script>
-        <script src="/app/config.js"></script>
-	
-		<script src="/app/hexmap/hexmap.js"></script>
-		<script src="/app/shell/shell.js"></script>
-	</div>
-    <div ng-include="'app/shell/shell.html'"></div>
+    <div ng-include="'app/shell/shell.html'" layout-fill></div>
 </body>
 </html>

@@ -16,6 +16,7 @@
     var nodeModulesJsOrder = [
         "./node_modules/**/dist/jquery.js",
         "./node_modules/**/angular.js",
+        "./node_modules/**/angular-route.js",
         "./node_modules/**/angular-animate.js",
         "./node_modules/**/angular-aria.js",
         "./node_modules/**/angular-material.js"

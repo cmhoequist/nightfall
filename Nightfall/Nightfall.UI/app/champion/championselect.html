@@ -1,0 +1,16 @@
+﻿<md-content layout="column" layout-fill ng-controller="ChampCtrl as vm">
+    <md-tabs md-border-bottom flex>
+        <md-tab ng-repeat="champion in vm.champions" label="{{champion}}">
+            <md-tab-body>
+                <md-card layout-fill>
+                    <md-card-header>
+                        Card #1
+                    </md-card-header>
+                    <md-card-content>
+                        <p>Some content</p>
+                    </md-card-content>
+                </md-card>
+            </md-tab-body>
+        </md-tab>
+    </md-tabs>
+</md-content>
