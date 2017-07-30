@@ -11,7 +11,7 @@
 
             ////IMPLEMENTATION
             function getChampions() {
-                championApi.getAll().then(function (response) {
+                championApi.getDetails().then(function (response) {
                     vm.champions = response.data;
                 }, function (err) {
                     console.log("Error: Could not get champions.");

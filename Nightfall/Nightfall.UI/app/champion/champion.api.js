@@ -9,6 +9,9 @@
             return {
                 getAll: function () {
                     return $http.get(url + '/api/champions/all');
+                },
+                getDetails: function () {
+                    return $http.get(url + '/api/champions/details');
                 }
             }
         }]);

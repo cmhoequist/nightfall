@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChampionRepository.cs" />
+    <Compile Include="Dto\AbilityRow.cs" />
+    <Compile Include="QueryHandlers\ChampionQueryRepository.cs" />
+    <Compile Include="QueryHandlers\ChampionRepository.cs" />
     <Compile Include="Dto\ChampionRow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

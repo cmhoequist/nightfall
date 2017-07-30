@@ -1,13 +1,38 @@
 ﻿<md-content layout="column" layout-fill ng-controller="ChampCtrl as vm">
     <md-tabs md-border-bottom flex>
-        <md-tab ng-repeat="champion in vm.champions" label="{{champion}}">
+        <md-tab ng-repeat="champion in vm.champions">
+            <md-tab-label>
+                <large-tab>
+                    {{champion.Name}}
+                </large-tab>
+            </md-tab-label>
             <md-tab-body>
                 <md-card layout-fill>
-                    <md-card-header>
-                        Card #1
-                    </md-card-header>
-                    <md-card-content>
-                        <p>Some content</p>
+                    <md-card-content layout="row" layout-fill>
+                        <div layout="column" flex="50">
+                            <div layout="row" layout-align="end center">
+                                <h1 flex="50">
+                                    {{champion.Name}}
+                                </h1>
+                                <h2 flex="25">
+                                    Courage: {{champion.CourageExpression}}
+                                </h2>
+                                <h2 flex="25">
+                                    Fortitude: {{champion.FortitudeExpression}}
+                                </h2>
+                            </div>
+                            <md-card class="hoverable" layout-margin layout-padding layout="row" layout-align="start center" ng-repeat="ability in champion.Abilities">
+                                <h1>
+                                    {{ability.Tier}}
+                                </h1>
+                                <p>
+                                    {{ability.Description}}
+                                </p>
+                            </md-card>
+                        </div>
+                        <div flex="50" style="background-color: pink">
+                            {{champion}}
+                        </div>
                     </md-card-content>
                 </md-card>
             </md-tab-body>

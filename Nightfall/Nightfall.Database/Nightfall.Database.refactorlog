@@ -77,4 +77,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[FK_Bridge_Token]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="e8431595-9e0a-43e3-964a-080cf6eb76ee" ChangeDateTime="07/29/2017 23:23:32">
+    <Property Name="ElementName" Value="[dbo].[StatExpression].[Expression]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[StatExpression]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExpressionString" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="badea057-32d6-40e6-bbef-37484b0cc855" ChangeDateTime="07/29/2017 23:26:12">
+    <Property Name="ElementName" Value="[dbo].[Champion].[Courage]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Champion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CourageId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6a629ca5-669a-4704-a789-c69b67f74f4c" ChangeDateTime="07/29/2017 23:26:15">
+    <Property Name="ElementName" Value="[dbo].[Champion].[Fortitude]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Champion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FortitudeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5d5cee36-9912-4b2c-8408-f010193f35ef" ChangeDateTime="07/30/2017 00:29:35">
+    <Property Name="ElementName" Value="[dbo].[Champion].[CourageId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Champion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CourageExpression" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dafb46b0-5839-4bf0-ac32-6b16e46c0aa7" ChangeDateTime="07/30/2017 00:29:39">
+    <Property Name="ElementName" Value="[dbo].[Champion].[FortitudeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Champion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FortitudeExpression" />
+  </Operation>
 </Operations>

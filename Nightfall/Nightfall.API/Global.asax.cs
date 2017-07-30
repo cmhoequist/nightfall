@@ -1,14 +1,12 @@
 ﻿using Autofac;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using System.Web.Routing;
 using Nightfall.Datastore;
-using Nightfall.Application;
 using Autofac.Integration.WebApi;
 using System.Reflection;
+using Nightfall.Application.Interfaces;
+using Nightfall.Datastore.QueryHandlers;
 
 namespace Nightfall.API
 {
@@ -24,6 +22,9 @@ namespace Nightfall.API
             builder
                 .RegisterType<ChampionRepository>()
                 .As<IChampionRepository>();
+            builder
+                .RegisterType<ChampionQueryRepository>()
+                .As<IChampionQueryRepository>();
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }

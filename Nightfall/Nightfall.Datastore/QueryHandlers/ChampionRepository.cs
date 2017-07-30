@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Linq;
-using Nightfall.Application;
+using Nightfall.Application.Interfaces;
 
-namespace Nightfall.Datastore
+namespace Nightfall.Datastore.QueryHandlers
 {
     public class ChampionRepository: IChampionRepository
     {

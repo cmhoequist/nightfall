@@ -1,4 +1,4 @@
-﻿using Nightfall.Application;
+﻿using Nightfall.Application.Interfaces;
 using System;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -8,17 +8,25 @@ namespace Nightfall.API.Controllers
     [RoutePrefix("api/champions")]
     public class ChampionController : ApiController
     {
-        private readonly IChampionRepository _repository;
+        private readonly IChampionRepository _championRepository;
+        private readonly IChampionQueryRepository _championQueryRepository;
 
-        public ChampionController(IChampionRepository repository)
+        public ChampionController(IChampionRepository repository, IChampionQueryRepository queryRepository)
         {
-            _repository = repository;
+            _championRepository = repository;
+            _championQueryRepository = queryRepository;
         }
 
         [Route("all")]
         public async Task<IHttpActionResult> GetAll()
         {
-            return Ok(await _repository.GetAll());
+            return Ok(await _championRepository.GetAll());
+        }
+
+        [Route("details")]
+        public async Task<IHttpActionResult> GetDetails()
+        {
+            return Ok(await _championQueryRepository.GetAllDetails());
         }
     }
 }
