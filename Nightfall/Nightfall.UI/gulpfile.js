@@ -24,6 +24,7 @@
 
     var cssOrder = [
         "./node_modules/**/angular-material.css",
+        "./node_modules/**/font-awesome.css",
         "./content/styles.css"
     ];
 

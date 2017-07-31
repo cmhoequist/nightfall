@@ -5,6 +5,9 @@
             $routeProvider
                 .when('/', {
                     templateUrl: "app/champion/championselect.html"
+                })
+                .when('/player', {
+                    templateUrl: "app/player/player.html"
                 });
         }]);
 })();

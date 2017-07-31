@@ -17,13 +17,15 @@ namespace Nightfall.Datastore.QueryHandlers
 
         public async Task<IEnumerable<ChampionQuery>> GetAllDetails()
         {
-            const string query = @" SELECT * FROM dbo.Champion;
+            const string query = @" SELECT * FROM dbo.Champion as c
+                                    JOIN dbo.ColorScheme as s
+                                    ON c.PrimaryColor = s.PrimaryColor;
                                     SELECT * FROM dbo.ChampionAbility;";
 
             using (var conn = new SqlConnection(_connectionStr))
             using (var multi = await conn.QueryMultipleAsync(query))
             {
-                var champs = await multi.ReadAsync<ChampionRow>();
+                var champs = await multi.ReadAsync<dynamic>();
                 var abilities = await multi.ReadAsync<AbilityRow>();
 
                 return champs.Select(
@@ -33,7 +35,15 @@ namespace Nightfall.Datastore.QueryHandlers
                             Name = champion.Name,
                             CourageExpression = champion.CourageExpression,
                             FortitudeExpression = champion.FortitudeExpression,
-                            Color = champion.Color,
+                            Sigil = champion.Sigil,
+                            Color = new ColorQuery()
+                            {
+                                PrimaryColor = champion.PrimaryColor,
+                                LightAccent = champion.LightAccent,
+                                DarkAccent = champion.DarkAccent,
+                                LightComplement = champion.LightComplement,
+                                DarkComplement = champion.DarkComplement
+                            },
                             Abilities = abilities
                                 .Where(ability => ability.ChampionId == champion.Id)
                                 .Select(

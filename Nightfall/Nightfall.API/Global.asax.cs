@@ -25,6 +25,10 @@ namespace Nightfall.API
             builder
                 .RegisterType<ChampionQueryRepository>()
                 .As<IChampionQueryRepository>();
+            builder
+                .RegisterType<ZonePersistenceHandler>()
+                .As<IZonePersistenceHandler>();
+
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }

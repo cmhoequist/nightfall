@@ -10,7 +10,8 @@ namespace Nightfall.Application.Models
         public string Name { get; set; }
         public string CourageExpression { get; set; }
         public string FortitudeExpression { get; set; }
-        public string Color { get; set; }
+        public string Sigil { get; set; }
+        public ColorQuery Color { get; set; }
         public IEnumerable<AbilityQuery> Abilities { get; set; }
 
         public ChampionQuery() { }

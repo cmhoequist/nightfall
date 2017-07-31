@@ -65,14 +65,23 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\champion\champion-display.html" />
     <Content Include="app\champion\champion.api.js" />
+    <Content Include="app\champion\champion.directives.js" />
     <Content Include="app\champion\champion.js" />
     <Content Include="app\champion\champion.module.js" />
     <Content Include="app\champion\championselect.html" />
     <Content Include="app\config.js" />
     <Content Include="app\hexmap\hexmap.html" />
     <Content Include="app\hexmap\hexmap.js" />
+    <Content Include="app\player\module.player.js" />
+    <Content Include="app\player\player.html" />
+    <Content Include="app\player\player.js" />
     <Content Include="app\routing.js" />
+    <Content Include="app\shared\message.api.js" />
+    <Content Include="app\shared\nightfall.directives.js" />
+    <Content Include="app\shared\zone.api.js" />
+    <Content Include="app\shared\zone.module.js" />
     <Content Include="content\images\placeholder-image.jpg" />
     <Content Include="content\styles.css" />
     <Content Include="gulpfile.js" />

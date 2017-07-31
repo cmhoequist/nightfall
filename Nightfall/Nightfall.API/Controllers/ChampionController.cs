@@ -17,7 +17,7 @@ namespace Nightfall.API.Controllers
             _championQueryRepository = queryRepository;
         }
 
-        [Route("all")]
+        [Route("")]
         public async Task<IHttpActionResult> GetAll()
         {
             return Ok(await _championRepository.GetAll());

@@ -6,6 +6,8 @@
         'ngMaterial',
 
         //Project dependencies
-        'moritz.nightfall.champions',
+        'moritz.nightfall.champion',
+        'moritz.nightfall.player',
+        'moritz.nightfall.zone',
     ]);
 })();

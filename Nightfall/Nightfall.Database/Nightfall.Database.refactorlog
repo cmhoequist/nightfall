@@ -112,4 +112,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="FortitudeExpression" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="a8317dbc-cc1b-4399-ba8e-3f2ec18e8c7a" ChangeDateTime="07/30/2017 14:45:30">
+    <Property Name="ElementName" Value="[dbo].[ColorScheme].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ColorScheme]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Color" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b65d48d5-95d1-46f9-a819-d18f04e4ca98" ChangeDateTime="07/30/2017 14:46:55">
+    <Property Name="ElementName" Value="[dbo].[Champion].[Color]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Champion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ColorScheme" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4a9215c6-4bed-4d31-9e5f-0cef63718325" ChangeDateTime="07/30/2017 14:47:00">
+    <Property Name="ElementName" Value="[dbo].[ColorScheme].[Color]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ColorScheme]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Primary" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9205ac42-9795-4934-9b93-9177192c9141" ChangeDateTime="07/30/2017 14:47:03">
+    <Property Name="ElementName" Value="[dbo].[ColorScheme].[Primary]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ColorScheme]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PrimaryColor" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="44342223-cc8d-4362-8c56-434fad344e49" ChangeDateTime="07/30/2017 14:47:56">
+    <Property Name="ElementName" Value="[dbo].[Champion].[ColorScheme]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Champion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PrimaryColor" />
+  </Operation>
 </Operations>

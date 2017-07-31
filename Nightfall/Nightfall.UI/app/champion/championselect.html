@@ -1,6 +1,6 @@
-﻿<md-content layout="column" layout-fill ng-controller="ChampCtrl as vm">
+﻿<md-content ng-controller="ChampCtrl as vm" layout="column" layout-fill>
     <md-tabs md-border-bottom flex>
-        <md-tab ng-repeat="champion in vm.champions">
+        <md-tab ng-repeat="champion in vm.champions | orderBy:'Name'">
             <md-tab-label>
                 <large-tab>
                     {{champion.Name}}
@@ -8,31 +8,34 @@
             </md-tab-label>
             <md-tab-body>
                 <md-card layout-fill>
-                    <md-card-content layout="row" layout-fill>
-                        <div layout="column" flex="50">
-                            <div layout="row" layout-align="end center">
-                                <h1 flex="50">
-                                    {{champion.Name}}
-                                </h1>
-                                <h2 flex="25">
-                                    Courage: {{champion.CourageExpression}}
-                                </h2>
-                                <h2 flex="25">
-                                    Fortitude: {{champion.FortitudeExpression}}
-                                </h2>
+                    <md-card-content layout="row" layout-fill layout-align="center start">
+                        <champion-display flex="15" layout-fill></champion-display>
+                        <div layout="column" flex="60" layout-fill>
+                            <div flex="90">
+                                <div ng-style="{'color': champion.Color.PrimaryColor}" layout="row" layout-align="end center" layout-margin>
+                                    <h1 flex="60">
+                                        {{champion.Name}}
+                                        <span class="md-fab fa fa-{{champion.Sigil}}"></span>
+                                    </h1>
+                                    <h2 flex="20">
+                                        Courage: {{champion.CourageExpression}}
+                                    </h2>
+                                    <h2 flex="20">
+                                        Fortitude: {{champion.FortitudeExpression}}
+                                    </h2>
+                                </div>
+                                <hoverable ng-repeat="ability in champion.Abilities" data-hover-color="{{champion.Color.LightComplement}}" layout="row" layout-align="start center" data-pad="true" data-margin="true">
+                                    <h1>
+                                        {{ability.Tier}}
+                                    </h1>
+                                    <p>
+                                        {{ability.Description}}
+                                    </p>
+                                </hoverable>
                             </div>
-                            <md-card class="hoverable" layout-margin layout-padding layout="row" layout-align="start center" ng-repeat="ability in champion.Abilities">
-                                <h1>
-                                    {{ability.Tier}}
-                                </h1>
-                                <p>
-                                    {{ability.Description}}
-                                </p>
-                            </md-card>
+                            <md-button flex="10" class="hoverable" ng-click="vm.selectChampion(champion)"><h1>Accept</h1></md-button>
                         </div>
-                        <div flex="50" style="background-color: pink">
-                            {{champion}}
-                        </div>
+                        <champion-display flex="15" layout-fill></champion-display>
                     </md-card-content>
                 </md-card>
             </md-tab-body>

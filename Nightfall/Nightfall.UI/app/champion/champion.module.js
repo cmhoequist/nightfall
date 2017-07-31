@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module('moritz.nightfall.champions', []);
+    angular.module('moritz.nightfall.champion', []);
 })();
