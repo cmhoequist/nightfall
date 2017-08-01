@@ -14,7 +14,7 @@
                     return $http.get(url + '/api/champions/details');
                 },
                 selectChampion: function (data) {
-                    eventService.publish('champctrl:select', data);
+                    eventService.publish(config.topics.selectChampion, data);
                     $location.path('/player/');
                 }
             }

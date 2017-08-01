@@ -15,6 +15,10 @@
 
     function Config() {
         this.apiBaseUrl = 'http://localhost:54526/';
+        this.topics = {
+            selectChampion: 'champctrl:select',
+            savePlayer: 'playerctrl:save'
+        };
     }
 
     var customBlack = {

@@ -74,10 +74,10 @@
     <Content Include="app\config.js" />
     <Content Include="app\hexmap\hexmap.html" />
     <Content Include="app\hexmap\hexmap.js" />
-    <Content Include="app\player\module.player.js" />
+    <Content Include="app\player\player.module.js" />
     <Content Include="app\player\player.html" />
     <Content Include="app\player\player.js" />
-    <Content Include="app\player\playerService.js" />
+    <Content Include="app\player\player.api.js" />
     <Content Include="app\routing.js" />
     <Content Include="app\shared\eventService.js" />
     <Content Include="app\shared\nightfall.directives.js" />
