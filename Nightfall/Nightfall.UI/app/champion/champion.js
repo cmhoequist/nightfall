@@ -13,7 +13,7 @@
 
             ////IMPLEMENTATION
             function selectChampion(champion) {
-                championApi.selectChampion(champion.Name);
+                championApi.selectChampion(champion);
             }
 
             function getChampions() {

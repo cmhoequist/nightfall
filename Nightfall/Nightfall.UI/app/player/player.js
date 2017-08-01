@@ -4,7 +4,7 @@
         .controller('PlayerCtrl', ['zoneApi', 'playerApi', function (zoneApi, playerApi) {
             ////VARIABLES
             var vm = this;
-            vm.player = { name: '', archetype: '', nativeZone: '' };
+            vm.player = { Name: '', Archetype: {}};
             vm.zones = {};
 
             ////LISTENERS
@@ -14,24 +14,31 @@
 
             ////IMPLEMENTATION
             function save() {
-                playerApi.save(vm.player).then(function (response) {
-                    console.log("player saved!");
-                },
-                function (error) {
-                    console.log("Error saving player: " + error);
+                playerApi.save(createPlayerAddCommand()).then(function (response) {
+                    if (response != null) {
+                        console.log("player saved!");
+                    }
                 });
             }
 
 
             ////HELPER METHODS
             function activate() {
-                vm.player.archetype = playerApi.consumeSelectedChampion();
+                vm.player.Archetype = playerApi.consumeSelectedChampion();
                 zoneApi.getAll().then(function (response) {
                     vm.zones = response.data;
                 },
                 function (error) {
                     console.log("Error retrieving zones.", error);                
                 })
+            }
+
+            function createPlayerAddCommand() {
+                return {
+                    Name: vm.player.Name,
+                    ChampionId: vm.player.Archetype.Id,
+                    ZoneId: vm.player.ZoneId
+                }
             }
 
             ////ACTIVATION
