@@ -14,13 +14,14 @@
 
             return {
                 save: function (player) {
-                    $http.post(url + '/api/players/', player)
+                    return $http.post(url + '/api/players/', player)
                         .then(function (response) {
                             eventService.publish(config.topics.savePlayer, player);
                             return response.data;
                         },
                         function (error) {
                             console.log('Error saving player: ', error);
+                            return null;
                         });
                 },
                 listen: function (topic, fnCallback) {

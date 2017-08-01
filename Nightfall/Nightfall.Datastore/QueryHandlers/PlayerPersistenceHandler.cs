@@ -19,15 +19,16 @@ namespace Nightfall.Datastore.QueryHandlers
         {
             const string query = @"INSERT INTO dbo.Player (Name, ZoneId, ChampionId)
                                     VALUES
-                                    (@Name, @ZoneId, @ChampionId);";
+                                    (@Name, @ZoneId, @ChampionId);
+                                    SELECT SCOPE_IDENTITY();";
 
             PlayerRow row = PlayerRow.FromDomain(player);
-            int results = row.Id;
+            int id = row.Id;
             using (var conn = new SqlConnection(_connectionStr))
             {
-                results = (await conn.QueryAsync<int>(query, row)).First();
+                id = (await conn.QueryAsync<int>(query, row)).First();
             }
-            return await GetById(results);
+            return await GetById(id);
         }
 
         public async Task<Player> GetById(int id)
@@ -36,7 +37,7 @@ namespace Nightfall.Datastore.QueryHandlers
             PlayerRow result;
             using (var conn = new SqlConnection(_connectionStr))
             {
-                result = (await conn.QueryAsync<PlayerRow>(query, id)).First();
+                result = (await conn.QueryAsync<PlayerRow>(query, new { id = id })).First();
             }
             return result.ToDomain();
         }
