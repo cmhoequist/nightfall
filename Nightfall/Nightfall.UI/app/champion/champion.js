@@ -1,7 +1,7 @@
 ﻿(function () {
     angular
         .module('moritz.nightfall.champion')
-        .controller('ChampCtrl', ['championApi', '$rootScope', '$location', 'messageService', function (championApi, $rootScope, $location, messageService) {
+        .controller('ChampCtrl', ['championApi', '$rootScope', function (championApi, $rootScope) {
             ////VARIABLES
             var vm = this;
             vm.champions = ['Hierophant', 'Confessor', 'Vatessor', 'Ostiary'];
@@ -13,10 +13,7 @@
 
             ////IMPLEMENTATION
             function selectChampion(champion) {
-                var data = champion.Name;
-                messageService.publish('champctrl:select', data);
-                $rootScope.$broadcast("champctrl:select", champion.Name);
-                $location.path('/player/');
+                championApi.selectChampion(champion.Name);
             }
 
             function getChampions() {

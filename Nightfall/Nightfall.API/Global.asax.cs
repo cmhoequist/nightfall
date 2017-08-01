@@ -20,9 +20,6 @@ namespace Nightfall.API
             ContainerBuilder builder = new ContainerBuilder();
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
             builder
-                .RegisterType<ChampionRepository>()
-                .As<IChampionRepository>();
-            builder
                 .RegisterType<ChampionQueryRepository>()
                 .As<IChampionQueryRepository>();
             builder

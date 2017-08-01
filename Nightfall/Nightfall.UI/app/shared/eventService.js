@@ -1,7 +1,7 @@
 ﻿(function(){
     angular
         .module('moritz.nightfall')
-        .factory('messageService', function () {
+        .factory('eventService', ['$rootScope', function ($rootScope) {
             var messages = {};
 
             return {
@@ -10,6 +10,7 @@
                         messages[title] = [];
                     }
                     messages[title].push(data);
+                    $rootScope.$broadcast(title, data);
                 },
                 consume: function (title) {
                     if (messages[title]) {
@@ -26,5 +27,5 @@
                     return response;
                 }
             }
-        });
+        }]);
 })();

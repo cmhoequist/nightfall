@@ -77,8 +77,9 @@
     <Content Include="app\player\module.player.js" />
     <Content Include="app\player\player.html" />
     <Content Include="app\player\player.js" />
+    <Content Include="app\player\playerService.js" />
     <Content Include="app\routing.js" />
-    <Content Include="app\shared\message.api.js" />
+    <Content Include="app\shared\eventService.js" />
     <Content Include="app\shared\nightfall.directives.js" />
     <Content Include="app\shared\zone.api.js" />
     <Content Include="app\shared\zone.module.js" />

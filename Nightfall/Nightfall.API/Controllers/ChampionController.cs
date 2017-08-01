@@ -6,21 +6,13 @@ using System.Web.Http;
 namespace Nightfall.API.Controllers
 {
     [RoutePrefix("api/champions")]
-    public class ChampionController : ApiController
+    public class ChampionQueryController : ApiController
     {
-        private readonly IChampionRepository _championRepository;
         private readonly IChampionQueryRepository _championQueryRepository;
 
-        public ChampionController(IChampionRepository repository, IChampionQueryRepository queryRepository)
+        public ChampionQueryController(IChampionQueryRepository queryRepository)
         {
-            _championRepository = repository;
             _championQueryRepository = queryRepository;
-        }
-
-        [Route("")]
-        public async Task<IHttpActionResult> GetAll()
-        {
-            return Ok(await _championRepository.GetAll());
         }
 
         [Route("details")]

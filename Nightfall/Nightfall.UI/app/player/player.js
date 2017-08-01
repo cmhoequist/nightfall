@@ -1,7 +1,7 @@
 ﻿(function () {
     angular
         .module('moritz.nightfall.player')
-        .controller('PlayerCtrl', ['$rootScope', 'messageService', 'zoneApi', function ($rootScope, messageService, zoneApi) {
+        .controller('PlayerCtrl', ['$rootScope', 'eventService', 'zoneApi', function ($rootScope, eventService, zoneApi) {
             ////VARIABLES
             var vm = this;
             vm.player = { name: 'Player', archetype: 'Champion', nativeZone: 'Home' };
@@ -13,12 +13,22 @@
             })
 
             ////INTERFACE
+            vm.savePlayer = savePlayer;
 
             ////IMPLEMENTATION
+            function savePlayer() {
+                playerApi.save(player).then(function (response) {
+                    console.log("player saved!");
+                },
+                function (error) {
+                    console.log("Error saving player: " + error);
+                });
+            }
+
 
             ////HELPER METHODS
             function activate() {
-                var champion = messageService.consume('champctrl:select');
+                var champion = eventService.consume('champctrl:select');
                 if (Object.keys(champion).length > 0) {
                     vm.player.archetype = champion;
                 }

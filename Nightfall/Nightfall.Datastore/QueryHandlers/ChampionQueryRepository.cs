@@ -19,7 +19,7 @@ namespace Nightfall.Datastore.QueryHandlers
         {
             const string query = @" SELECT * FROM dbo.Champion as c
                                     JOIN dbo.ColorScheme as s
-                                    ON c.PrimaryColor = s.PrimaryColor;
+                                    ON c.ColorSchemeId = s.Id;
                                     SELECT * FROM dbo.ChampionAbility;";
 
             using (var conn = new SqlConnection(_connectionStr))

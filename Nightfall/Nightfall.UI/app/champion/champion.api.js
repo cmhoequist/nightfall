@@ -1,7 +1,7 @@
 ﻿(function () {
     angular
         .module('moritz.nightfall.champion')
-        .factory('championApi', ['$http', 'config', function ($http, config) {
+        .factory('championApi', ['$http', 'config', 'eventService', '$location', function ($http, config, eventService, $location) {
             ////VARIABLES
             var url = config.apiBaseUrl;
 
@@ -12,7 +12,11 @@
                 },
                 getDetails: function () {
                     return $http.get(url + '/api/champions/details');
+                },
+                selectChampion: function (data) {
+                    eventService.publish('champctrl:select', data);
+                    $location.path('/player/');
                 }
             }
         }]);
-})();
+})(); 
