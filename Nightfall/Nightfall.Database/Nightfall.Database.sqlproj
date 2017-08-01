@@ -59,26 +59,30 @@
     <Folder Include="Properties" />
     <Folder Include="tables" />
     <Folder Include="tables\bridges" />
+    <Folder Include="tables\metagame" />
+    <Folder Include="tables\ingame" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="tables\Coordinate.sql" />
-    <Build Include="tables\Champion.sql" />
     <Build Include="tables\Token.sql" />
     <Build Include="tables\Cell.sql" />
     <Build Include="tables\Map.sql" />
     <Build Include="tables\Edge.sql" />
-    <Build Include="tables\ChampionAbility.sql" />
     <Build Include="tables\Horror.sql" />
     <Build Include="tables\HuntEffect.sql" />
     <Build Include="tables\HorrorAbility.sql" />
     <Build Include="tables\Harbinger.sql" />
-    <Build Include="tables\ColorScheme.sql" />
+    <Build Include="tables\metagame\Player.sql" />
+    <Build Include="tables\metagame\Game.sql" />
+    <Build Include="tables\ingame\Champion.sql" />
+    <Build Include="tables\ingame\ColorScheme.sql" />
+    <Build Include="tables\ingame\ChampionAbility.sql" />
+    <Build Include="tables\ingame\Zone.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Nightfall.Database.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="tables\Zone.sql" />
     <Build Include="tables\ZoneEffect.sql" />
   </ItemGroup>
 </Project>
