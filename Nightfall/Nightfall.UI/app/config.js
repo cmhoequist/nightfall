@@ -17,7 +17,8 @@
         this.apiBaseUrl = 'http://localhost:54526/';
         this.topics = {
             selectChampion: 'champctrl:select',
-            savePlayer: 'playerctrl:save'
+            createPlayer: 'playerctrl:create',
+            createGame: 'gamectrl:create'
         };
     }
 

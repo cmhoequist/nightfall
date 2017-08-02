@@ -72,6 +72,7 @@
     <Content Include="app\champion\champion.module.js" />
     <Content Include="app\champion\championselect.html" />
     <Content Include="app\config.js" />
+    <Content Include="app\game\game.api.js" />
     <Content Include="app\hexmap\hexmap.html" />
     <Content Include="app\hexmap\hexmap.js" />
     <Content Include="app\player\player.module.js" />

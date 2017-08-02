@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nightfall
+namespace Nightfall.Core
 {
     public class Champion
     {

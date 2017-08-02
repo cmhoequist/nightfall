@@ -4,7 +4,7 @@
     [Name] VARCHAR(50) NOT NULL, 
     [ChampionId] INT NOT NULL, 
     [ZoneId] INT NOT NULL, 
-    [GameId] INT NULL DEFAULT 1, 
+    [GameId] INT NOT NULL , 
     [CellId] INT NULL DEFAULT 0, 
     CONSTRAINT [FK_Player_Game] FOREIGN KEY ([GameId]) REFERENCES [Game]([Id])
 )

@@ -9,5 +9,6 @@ namespace Nightfall.Application.Commands
         public string Name { get; set; }
         public int ChampionId { get; set; }
         public int ZoneId { get; set; }
+        public int GameId { get; set; }
     }
 }

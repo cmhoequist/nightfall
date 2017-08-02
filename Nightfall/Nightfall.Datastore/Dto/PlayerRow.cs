@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nightfall.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Nightfall.Datastore.Dto
         public string Name { get; set; }
         public int ChampionId { get; set; }
         public int ZoneId { get; set; }
+        public int GameId { get; set; }
 
         private PlayerRow() { }
 
@@ -22,13 +24,14 @@ namespace Nightfall.Datastore.Dto
                 Id = player.Id,
                 Name = player.Name,
                 ChampionId = player.ChampionId,
-                ZoneId = player.ZoneId
+                ZoneId = player.ZoneId,
+                GameId = player.GameId
             };
         }
 
         public Player ToDomain()
         {
-            return Player.Reconstitute(Id, Name, ChampionId, ZoneId);
+            return Player.Reconstitute(Id, Name, ChampionId, ZoneId, GameId);
         }
     }
 }

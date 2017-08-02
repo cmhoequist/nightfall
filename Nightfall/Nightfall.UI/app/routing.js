@@ -6,6 +6,9 @@
                 .when('/', {
                     templateUrl: "app/game/landing.html"
                 })
+                .when('/champion', {
+                    templateUrl: "app/champion/championselect.html"
+                })
                 .when('/player', {
                     templateUrl: "app/player/player.html"
                 });

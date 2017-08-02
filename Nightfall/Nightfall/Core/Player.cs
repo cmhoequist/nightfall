@@ -3,13 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nightfall
+namespace Nightfall.Core
 {
     public class Player
     {
         private string _name;
         private int _championId;
         private int _zoneId;
+        private int _gameId;
 
         public int Id { get; private set; }
         public string Name
@@ -47,24 +48,38 @@ namespace Nightfall
                 _zoneId = value;
             }
         }
+        public int GameId
+        {
+            get { return _gameId; }
+            set
+            {
+                if (value < 1)
+                {
+                    throw new ValidationException("Must provide a valid Game ID");
+                }
+                _gameId = value;
+            }
+        }
 
         private Player() { }
 
-        public Player(string name, int championId, int zoneId)
+        public Player(string name, int championId, int zoneId, int gameId)
         {
             Name = name;
             ChampionId = championId;
             ZoneId = zoneId;
+            GameId = gameId;
         }
 
-        public static Player Reconstitute(int id, string name, int championId, int zoneId)
+        public static Player Reconstitute(int id, string name, int championId, int zoneId, int gameId)
         {
             return new Player()
             {
                 Id = id,
                 Name = name,
                 ChampionId = championId,
-                ZoneId = zoneId
+                ZoneId = zoneId,
+                GameId = gameId
             };
         }
     }

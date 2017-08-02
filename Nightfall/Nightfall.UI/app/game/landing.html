@@ -1,4 +1,4 @@
-﻿<md-content layout-fill layout="column" layout-align="center">
+﻿<md-content ng-controller="GameCtrl as vm" layout-fill layout="column" layout-align="center">
     <div ng-show="!vm.showGameCreateUi" layout-fill layout="column" layout-align="center">
         <md-button ng-click="vm.showGameCreateUi = !vm.showGameCreateUi" class="hoverable">
             <h2>New Game</h2>
@@ -20,7 +20,7 @@
                 </md-input-container>
             </md-card>
         </div>
-        <md-button class="hoverable">
+        <md-button class="hoverable" ng-click="vm.createGame()">
             <h2>Submit</h2>
         </md-button>
         <md-button class="hoverable" ng-click="vm.showGameCreateUi = !vm.showGameCreateUi">

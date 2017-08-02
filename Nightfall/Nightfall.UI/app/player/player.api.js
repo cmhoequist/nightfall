@@ -7,7 +7,15 @@
             function consumeTopic(topic) {
                 var result = eventService.consume(topic);
                 if (result.length < 1) {
-                    result = ['Default'];
+                    console.log('No messages found on ' + topic + '!');
+                }
+                return result;
+            }
+
+            function readTopic(topic) {
+                var result = eventService.read(topic);
+                if (result.length < 1) {
+                    console.log('No messages found on ' + topic + '!');
                 }
                 return result;
             }
@@ -16,7 +24,7 @@
                 save: function (player) {
                     return $http.post(url + '/api/players/', player)
                         .then(function (response) {
-                            eventService.publish(config.topics.savePlayer, player);
+                            eventService.publish(config.topics.createPlayer, player);
                             return response.data;
                         },
                         function (error) {
@@ -28,8 +36,11 @@
                     eventService.subscribe(topic, fnCallback);
                 },
                 consumeSelectedChampion: function () {
-                    return consumeTopic(config.topics.selectChampion)[0];                
+                    return consumeTopic(config.topics.selectChampion)[0];
+                },
+                readCurrentGame: function () {
+                    return readTopic(config.topics.createGame)[0];
                 }
-            }
+            };
         }]);
 })();
