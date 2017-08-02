@@ -1,5 +1,6 @@
 ﻿using Nightfall.Application.Commands;
 using Nightfall.Application.Interfaces;
+using Nightfall.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace Nightfall.API.Controllers
         [HttpPost, Route("")]
         public async Task<IHttpActionResult> Save(AddPlayerCommand player)
         {
-            return Ok(await _playerPersistence.Save(new Player(player.Name, player.ChampionId, player.ZoneId)));
+            return Ok(await _playerPersistence.Save(new Player(player.Name, player.ChampionId, player.ZoneId, player.GameId)));
         }
     }
 }

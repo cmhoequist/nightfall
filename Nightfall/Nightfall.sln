@@ -13,7 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nightfall.API", "Nightfall.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nightfall", "Nightfall\Nightfall.csproj", "{3255058F-6FAA-49AA-B6C7-A1FF4939B2DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nightfall.Application", "Nightfall.Application\Nightfall.Application.csproj", "{4F267E01-D4B8-467D-AD8F-49AEA1A3B99F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nightfall.Application", "Nightfall.Application\Nightfall.Application.csproj", "{4F267E01-D4B8-467D-AD8F-49AEA1A3B99F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{89185019-F86C-4859-8740-C98E149D1FD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{37D4734E-D612-43DA-A18B-E66CDD1DF292}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{DD876BB6-3B93-4A6C-ABB6-BC7C8B5F48A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcceptanceTests", "AcceptanceTests\AcceptanceTests.csproj", "{7DDEB43B-525F-40DB-84F4-5A00BA7B3BDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,8 +55,25 @@ Global
 		{4F267E01-D4B8-467D-AD8F-49AEA1A3B99F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F267E01-D4B8-467D-AD8F-49AEA1A3B99F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F267E01-D4B8-467D-AD8F-49AEA1A3B99F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37D4734E-D612-43DA-A18B-E66CDD1DF292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D4734E-D612-43DA-A18B-E66CDD1DF292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37D4734E-D612-43DA-A18B-E66CDD1DF292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37D4734E-D612-43DA-A18B-E66CDD1DF292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD876BB6-3B93-4A6C-ABB6-BC7C8B5F48A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD876BB6-3B93-4A6C-ABB6-BC7C8B5F48A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD876BB6-3B93-4A6C-ABB6-BC7C8B5F48A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD876BB6-3B93-4A6C-ABB6-BC7C8B5F48A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DDEB43B-525F-40DB-84F4-5A00BA7B3BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDEB43B-525F-40DB-84F4-5A00BA7B3BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDEB43B-525F-40DB-84F4-5A00BA7B3BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDEB43B-525F-40DB-84F4-5A00BA7B3BDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{37D4734E-D612-43DA-A18B-E66CDD1DF292} = {89185019-F86C-4859-8740-C98E149D1FD4}
+		{DD876BB6-3B93-4A6C-ABB6-BC7C8B5F48A2} = {89185019-F86C-4859-8740-C98E149D1FD4}
+		{7DDEB43B-525F-40DB-84F4-5A00BA7B3BDD} = {89185019-F86C-4859-8740-C98E149D1FD4}
 	EndGlobalSection
 EndGlobal

@@ -48,9 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dto\AbilityRow.cs" />
+    <Compile Include="Dto\GameRow.cs" />
     <Compile Include="Dto\PlayerRow.cs" />
     <Compile Include="QueryHandlers\ChampionQueryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryHandlers\GamePersistenceHandler.cs" />
     <Compile Include="QueryHandlers\PlayerPersistenceHandler.cs" />
     <Compile Include="QueryHandlers\ZonePersistenceHandler.cs" />
   </ItemGroup>

@@ -8,6 +8,7 @@ using Nightfall.Application.Commands;
 using System.Data.SqlClient;
 using Nightfall.Datastore.Dto;
 using Dapper;
+using Nightfall.Core;
 
 namespace Nightfall.Datastore.QueryHandlers
 {
@@ -17,9 +18,9 @@ namespace Nightfall.Datastore.QueryHandlers
 
         public async Task<Player> Save(Player player)
         {
-            const string query = @"INSERT INTO dbo.Player (Name, ZoneId, ChampionId)
+            const string query = @"INSERT INTO dbo.Player (Name, ZoneId, ChampionId, GameId)
                                     VALUES
-                                    (@Name, @ZoneId, @ChampionId);
+                                    (@Name, @ZoneId, @ChampionId, @GameId);
                                     SELECT SCOPE_IDENTITY();";
 
             PlayerRow row = PlayerRow.FromDomain(player);

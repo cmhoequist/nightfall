@@ -28,6 +28,9 @@ namespace Nightfall.API
             builder
                 .RegisterType<PlayerPersistenceHandler>()
                 .As<IPlayerPersistenceHandler>();
+            builder
+                .RegisterType<GamePersistenceHandler>()
+                .As<IGamePersistenceHandler>();
 
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);

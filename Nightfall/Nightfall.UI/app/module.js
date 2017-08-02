@@ -6,6 +6,7 @@
         'ngMaterial',
 
         //Project dependencies
+        'moritz.nightfall.game',
         'moritz.nightfall.champion',
         'moritz.nightfall.player',
         'moritz.nightfall.zone',

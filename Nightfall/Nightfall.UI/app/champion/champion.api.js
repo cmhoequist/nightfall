@@ -17,6 +17,6 @@
                     eventService.publish(config.topics.selectChampion, data);
                     $location.path('/player/');
                 }
-            }
+            };
         }]);
 })(); 
