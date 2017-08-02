@@ -1,0 +1,27 @@
+﻿<md-content layout-fill layout="column" layout-align="center">
+    <div ng-show="!vm.showGameCreateUi" layout-fill layout="column" layout-align="center">
+        <md-button ng-click="vm.showGameCreateUi = !vm.showGameCreateUi" class="hoverable">
+            <h2>New Game</h2>
+        </md-button>
+        <md-button class="hoverable">
+            <h2>Load Game</h2>
+        </md-button>
+    </div>
+    <div ng-show="vm.showGameCreateUi"  layout="row" layout-fill layout-align="center">
+        <div flex="30" layout="column" layout-align="center" layout-fill>
+            <md-card>
+                <md-input-container>
+                    <!--md-no-float-->
+                    <label>Game Name</label>
+                    <input ng-model="vm.gameName" />
+                </md-input-container>
+            </md-card>
+        </div>
+        <md-button class="hoverable">
+            <h2>Submit</h2>
+        </md-button>
+        <md-button class="hoverable" ng-click="vm.showGameCreateUi = !vm.showGameCreateUi">
+            <h2>Cancel</h2>
+        </md-button>
+    </div>
+</md-content>

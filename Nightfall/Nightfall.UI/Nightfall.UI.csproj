@@ -83,6 +83,7 @@
     <Content Include="app\shared\nightfall.directives.js" />
     <Content Include="app\shared\zone.api.js" />
     <Content Include="app\shared\zone.module.js" />
+    <Content Include="app\game\game.module.js" />
     <Content Include="content\images\placeholder-image.jpg" />
     <Content Include="content\styles.css" />
     <Content Include="gulpfile.js" />
@@ -101,8 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\module.js" />
-    <Content Include="app\shell\shell.html" />
-    <Content Include="app\shell\shell.js" />
+    <Content Include="app\game\landing.html" />
+    <Content Include="app\game\game.js" />
     <Content Include="index.html" />
     <Content Include="Testing\testHtml.html" />
     <Content Include="Web.config" />
