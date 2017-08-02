@@ -7,13 +7,11 @@
             vm.showGameCreateUi = false;
 
             ////INTERFACE
-            
-            vm.newGame = newGame;
-            vm.loadGame = loadGame;
+            vm.createNewGame = createNewGame;
 
             ////IMPLEMENTATION
-            function newGame() {
-
+            function createNewGame() {
+                gameApi.createNewGame(vm.gameName);
             }
 
             ////HELPER METHODS
