@@ -17,22 +17,7 @@ namespace Nightfall.API
             GlobalConfiguration.Configure(WebApiConfig.Register);
             var config = GlobalConfiguration.Configuration;
 
-            ContainerBuilder builder = new ContainerBuilder();
-            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
-            builder
-                .RegisterType<ChampionQueryRepository>()
-                .As<IChampionQueryRepository>();
-            builder
-                .RegisterType<ZonePersistenceHandler>()
-                .As<IZonePersistenceHandler>();
-            builder
-                .RegisterType<PlayerPersistenceHandler>()
-                .As<IPlayerPersistenceHandler>();
-            builder
-                .RegisterType<GamePersistenceHandler>()
-                .As<IGamePersistenceHandler>();
-
-            var container = builder.Build();
+            var container = DependencyInjection.Bootstrap();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }
 
