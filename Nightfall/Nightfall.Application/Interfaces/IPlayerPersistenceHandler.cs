@@ -10,5 +10,6 @@ namespace Nightfall.Application.Interfaces
     public interface IPlayerPersistenceHandler
     {
         Task<Player> Save(Player player);
+        Task<Player> GetByName(string name);
     }
 }
