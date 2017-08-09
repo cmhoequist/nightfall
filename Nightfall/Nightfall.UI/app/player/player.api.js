@@ -1,7 +1,7 @@
 ﻿(function(){
     angular
         .module('moritz.nightfall.player')
-        .factory('playerApi', ['eventService', 'config', '$http', function (eventService, config, $http) {
+        .factory('playerApi', ['eventService', 'config', '$http', '$location', function (eventService, config, $http, $location) {
             var url = config.apiBaseUrl;
 
             function consumeTopic(topic) {
@@ -25,6 +25,7 @@
                     return $http.post(url + '/api/players/', player)
                         .then(function (response) {
                             eventService.publish(config.topics.createPlayer, player);
+                            $location.path('/hexmap/');
                             return response.data;
                         },
                         function (error) {

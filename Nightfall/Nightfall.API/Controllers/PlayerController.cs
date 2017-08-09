@@ -30,5 +30,16 @@ namespace Nightfall.API.Controllers
 
             return Ok(await _playerPersistence.Save(new Player(player.Name, player.ChampionId, player.ZoneId, player.GameId)));
         }
+
+        [HttpGet, Route("")]
+        public async Task<IHttpActionResult> GetByName(string name)
+        {
+            if (String.IsNullOrWhiteSpace(name))
+            {
+                return BadRequest("Name cannot be empty.");
+            }
+
+            return Ok(await _playerPersistence.GetByName(name));
+        }
     }
 }

@@ -49,6 +49,7 @@ namespace UnitTests.Api
         {
             var response = await _controller.Save(_fixture.Create<AddPlayerCommand>());
             response.Should().BeOfType(typeof(OkNegotiatedContentResult<Player>));
+            Assert.IsTrue(true);
         }
 
         [TestMethod]

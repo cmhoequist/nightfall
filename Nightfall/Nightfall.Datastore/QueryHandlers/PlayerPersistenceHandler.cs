@@ -42,5 +42,16 @@ namespace Nightfall.Datastore.QueryHandlers
             }
             return result.ToDomain();
         }
+
+        public async Task<Player> GetByName(string name)
+        {
+            const string query = @"SELECT * FROM dbo.Player WHERE Name = @name;";
+            PlayerRow result;
+            using (var conn = new SqlConnection(_connectionStr))
+            {
+                result = (await conn.QueryAsync<PlayerRow>(query, new { name = name })).First();
+            }
+            return result.ToDomain();
+        }
     }
 }
