@@ -11,6 +11,9 @@
                 })
                 .when('/player', {
                     templateUrl: "app/player/player.html"
+                })
+                .when('/hexmap', {
+                    templateUrl: "app/hexmap/hexmap.html"
                 });
         }]);
 })();
